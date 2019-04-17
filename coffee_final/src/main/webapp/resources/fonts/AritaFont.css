@@ -1,0 +1,44 @@
+@charset "utf-8";
+@font-face {
+	font-family:'aritadm';
+	src: url('../fonts/AritaDotumMedium.eot');
+	src: local(※), url('../fonts/AritaDotumMedium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AritaDotumMedium.woff') format('woff'),
+		 url('../fonts/AritaDotumMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:'aritadl';
+	src: url('../fonts/AritaDotumLight.eot');
+	src: local(※), url('../fonts/AritaDotumLight.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AritaDotumLight.woff') format('woff'),
+		 url('../fonts/AritaDotumLight.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:'aritasm';
+	src: url('../fonts/AritaSansMedium.eot');
+	src: local(※), url('../fonts/AritaSansMedium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AritaSansMedium.woff') format('woff'),
+		 url('../fonts/AritaSansMedium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:'aritadsb';
+	src: url('../fonts/AritaDotumSemiBold.eot');
+	src: local(※), url('../fonts/AritaDotumSemiBold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/AritaDotumSemiBold.woff') format('woff'),
+		 url('../fonts/AritaDotumSemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+사용예시
+
+font-family: aritadsb,'아리따돋움', aritadm, 'Apple Gothic', 'DroidSansFallback', '맑은고딕', 'Malgun Gothic', '나눔고딕', NanumGothic, '돋움', dotum, arial, sans-serif, helvetica;
+
+*/

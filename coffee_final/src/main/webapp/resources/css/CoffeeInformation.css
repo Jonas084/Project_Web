@@ -1,0 +1,49 @@
+/* Explorer */
+
+.clear{clear:both}
+
+.localcoffee span {
+	cursor: pointer;
+}
+
+.cafe {
+	display: none;
+	border: 1px solid #000;
+	height: 30px;
+	width: 290px;
+	margin-left: 10px;
+	position: relative;
+}
+		
+a:hover ~ .cafe {
+	display: block;
+	width: 600px;
+	height: 400px;
+	padding: 5px;
+	background: #fff;
+	border: 1px solid #000;
+}
+
+
+/* .abc {
+	text-align:center
+} */
+
+.def {
+	
+	float : left;
+	margin : 15px;
+	padding : 5px;
+	/* overflow : hidden; */
+	/* background : #053DF5; */
+	text-align:center;
+}
+
+.ghi {
+	
+	float : left;
+	margin : 15px;
+	padding : 5px;
+	/* overflow : hidden; */
+	/* background : #AEFC69; */
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="spring.fin.model.CoffeeInformationDTO"> 
+
+	<select id="select_recommand" parameterType="coffee_taste" resultType="coffee_recommand">
+	  select * from coffee_inform where coffee_number in(select coffee_number from taste where sourness <![CDATA[>=]]> #{sourness} and bitters <![CDATA[>=]]> #{bitters} and
+	  sweetness <![CDATA[>=]]> #{sweetness} and aroma <![CDATA[>=]]> #{aroma} and body <![CDATA[>=]]> #{body} and balance <![CDATA[>=]]> #{balance})
+   	</select>
+   	
+    <select id="select_recommandbest" parameterType="coffee_taste" resultType="coffee_recommand">
+   		select * from coffee_inform where coffee_number in(select coffee_number from taste where sourness <![CDATA[>=]]> #{sourness} and bitters <![CDATA[>=]]> #{bitters} and
+	  sweetness <![CDATA[>=]]> #{sweetness} and aroma <![CDATA[>=]]> #{aroma} and body <![CDATA[>=]]> #{body} and balance <![CDATA[>=]]> #{balance}) order by click_count desc
+   	</select>
+   	
+   	<select id="select_recommandlowprice" parameterType="coffee_taste" resultType="coffee_recommand">
+   		select * from coffee_inform where coffee_number in(select coffee_number from taste where sourness <![CDATA[>=]]> #{sourness} and bitters <![CDATA[>=]]> #{bitters} and
+	  sweetness <![CDATA[>=]]> #{sweetness} and aroma <![CDATA[>=]]> #{aroma} and body <![CDATA[>=]]> #{body} and balance <![CDATA[>=]]> #{balance}) order by price asc
+   	</select>
+   	
+   	<select id="select_recommandhighprice" parameterType="coffee_taste" resultType="coffee_recommand">
+   		select * from coffee_inform where coffee_number in(select coffee_number from taste where sourness <![CDATA[>=]]> #{sourness} and bitters <![CDATA[>=]]> #{bitters} and
+	  sweetness <![CDATA[>=]]> #{sweetness} and aroma <![CDATA[>=]]> #{aroma} and body <![CDATA[>=]]> #{body} and balance <![CDATA[>=]]> #{balance}) order by price desc
+   	</select>
+   	
+   	<select id="select_detail" resultType="coffee_recommand">
+   		select * from coffee_inform where coffee_number=#{coffee_number}
+   	</select>
+   	
+   	<update id="update_count" parameterType="coffee_recommand">
+	 update coffee_inform set click_count=#{click_count} where coffee_number=#{coffee_number}       
+	</update>
+	
+	<select id="main_img_get" parameterType="int" resultType="String">
+   		select main_img from coffee_inform where coffee_number=#{n}
+   	</select>
+   	<select id="imga_get" parameterType="int" resultType="String">
+   		select inform_img_a from coffee_inform where coffee_number=#{n}
+   	</select>
+   	<select id="name_get" parameterType="int" resultType="String">
+   		select coffee_name from coffee_inform where coffee_number=#{n}
+   	</select>
+   	<select id="price_get" parameterType="int" resultType="int">
+   		select price from coffee_inform where coffee_number=#{n}
+   	</select>
+</mapper>
+

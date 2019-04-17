@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="spring.fin.model.CoffeePostscriptDTO"> 
+	<select id="post_count" resultType="int">
+	  select count(board_number) from coffee_postscript
+	</select>
+ 	<insert id="insert_post" parameterType="coffee_post">
+    insert into coffee_postscript values (#{coffee_number}, #{board_number}, #{title},#{writer},#{click_count},#{evaluation},#{content},sysdate)
+  	</insert>
+  	<select id="post_select" parameterType="int" resultType="coffee_post">
+	  select * from coffee_postscript where coffee_number=#{coffee_number} order by board_number desc
+	</select>
+</mapper>
+
+ 

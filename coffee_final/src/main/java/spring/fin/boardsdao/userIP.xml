@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.fin.boardsmodel.userIPDTO">
+	 <select id="storeduserip" parameterType="userIP" resultType="String">
+     	select userIP from userIPstore where userIP = #{userIP} and coboard_no = #{coboard_no}     	
+     </select>
+     
+     <insert id="useripstore" parameterType="userIP">
+     	insert into userIPstore values (#{coboard_no}, #{userIP})
+     </insert> 
+	
+</mapper>

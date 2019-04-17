@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.fin.model.CoffeePostscriptDTO"> 
+	
+	<!-- <select id="select_recommand" parameterType="coffee_taste" resultType="coffee_recommand">
+	  select * from coffee_inform where coffee_number in(select coffee_number from taste where sourness <![CDATA[>=]]> #{sourness} and bitters <![CDATA[>=]]> #{bitters} and
+	  sweetness <![CDATA[>=]]> #{sweetness} and aroma <![CDATA[>=]]> #{aroma} and body <![CDATA[>=]]> #{body} and balance <![CDATA[>=]]> #{balance})
+   	</select> -->
+	
+	<select id="all" parameterType="coffee_post" resultType="spring.fin.model.CoffeePostscriptDTO"><!-- doaID/조회결과(데이터검색하는곳?)/반환결과타입    listAll/coffee_taste -->
+	  select * from coffee_postscript where evaluation like '%${evaluation}%' order by board_number desc 
+   	</select>
+   	<select id="title" parameterType="listAll" resultType="coffee_post"><!-- doaID/조회결과/반환결과타입    listAll/coffee_taste -->
+	  select * from coffee_postscript where title like '%${title}%' and title like '%${keyword}%' order by board_number desc 
+   	</select>
+	<select id="content" parameterType="listAll" resultType="coffee_post">
+	  select * from coffee_postscript where content like '%${content}%' and content like '%${keyword}%' order by board_number desc 
+   	</select>
+   	<select id="writer" parameterType="listAll" resultType="coffee_post">
+	  select * from coffee_postscript where writer like '%${writer}%' and writer like '%${keyword}%' order by board_number desc 
+   	</select>
+ 
+</mapper>
+

@@ -1,0 +1,24 @@
+.listimage{
+	border-radius: 20%;
+}
+
+#list_title{	
+	text-align: center;
+}
+
+#write_button{
+	float: right;
+	margin-bottom:100px; 
+}
+
+#list_t{
+	text-align: center;
+}
+
+.del_pass{
+	font-size: 2em;
+}
+
+.repl_writer{
+	font-size: 1.5em;
+}

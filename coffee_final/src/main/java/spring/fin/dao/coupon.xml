@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.fin.model.CouponDTO"> 
+	 
+  	<select id="coupon_check" parameterType="String" resultType="int">
+	  select count(*) from coupon where coupon_number=#{couponNum}
+	</select>	
+  	
+  	<select id="coupon_price_get" parameterType="String" resultType="int">
+	  select money from coupon where coupon_number=#{couponNum}
+	</select>	
+	
+  	<delete id="delete_coupon" parameterType="String">
+    delete from coupon where coupon_number = #{couponNum}
+  </delete>
+  
+</mapper>
+
+
+
+
+
+

@@ -1,0 +1,151 @@
+@CHARSET "UTF-8";
+
+#loginContainer {
+	position: relative;
+	text-align: center;
+}
+
+#bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	background: url(resources/images/LoginWallpaper.jpg) left top no-repeat;
+	background-size: cover;
+}
+
+.clear {
+	clear: both;
+}
+
+#login-form>div {
+	margin: 15px 0;
+}
+
+img {
+	max-width: 30%;
+	height: auto;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 3rem 2rem;
+	font-size: 3rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+		0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+		ease-in-out;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+		-webkit-box-shadow 0.15s ease-in-out;
+}
+
+/* 폼 css 사이즈에 따라 조절 */
+@media ( min-width : 576px) {
+	.form-control {
+		display: block;
+		width: 100%;
+		padding: 3rem 2rem;
+		font-size: 3rem;
+		line-height: 1.5;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+			0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+			ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+			-webkit-box-shadow 0.15s ease-in-out;
+	}
+}
+
+@media ( min-width : 768px) {
+	.lginform-control {
+		display: block;
+		width: 100%;
+		padding: 3rem 2rem;
+		font-size: 3rem;
+		line-height: 1.5;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+			0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+			ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+			-webkit-box-shadow 0.15s ease-in-out;
+	}
+	/* 
+	.btn {
+		font-size: 2rem;
+		padding: 2rem 2rem;
+	}
+	 */
+}
+
+@media ( min-width : 1199px) {
+	.form-control {
+		display: block;
+		width: 100%;
+		padding: 0.5rem 0.8rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+			0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+			ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+			-webkit-box-shadow 0.15s ease-in-out;
+	}
+}
+
+@media ( max-width : 1200px) {
+	.form-control {
+		display: block;
+		width: 100%;
+		padding: 2rem 2rem;
+		font-size: 3rem;
+		line-height: 1.5;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		border-radius: 0.25rem;
+		-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow
+			0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s
+			ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+			-webkit-box-shadow 0.15s ease-in-out;
+	}
+	.btn {
+		font-size: 2rem;
+		padding: 2rem 2rem;
+	}
+}

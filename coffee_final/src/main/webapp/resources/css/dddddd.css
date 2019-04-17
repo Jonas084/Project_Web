@@ -1,0 +1,6 @@
+.text-center{margin-top:60px;}
+.contain{margin-top:80px;}
+@media only screen and (max-width: 800px) {
+table td:nth-child(6), 
+table th:nth-child(6) {display: none;}
+}
